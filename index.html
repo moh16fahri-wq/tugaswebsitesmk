@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMKN 1 Gondang Nganjuk - Sekolah Menengah Kejuruan Unggulan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <!-- Logo dengan klik untuk upload foto logo -->
+                <div class="logo-icon" id="logoIcon" onclick="triggerLogoUpload()" title="Klik untuk ganti logo">🏫</div>
+                <input type="file" id="logoUploadInput" accept="image/*" style="display:none" onchange="handleLogoUpload(event)">
+                <span>SMKN 1 Gondang</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" onclick="scrollToSection('home')">Beranda</a></li>
+                <li><a href="#about" onclick="scrollToSection('about')">Tentang</a></li>
+                <li><a href="#programs" onclick="scrollToSection('programs')">Jurusan</a></li>
+                <li><a href="#facilities" onclick="scrollToSection('facilities')">Fasilitas</a></li>
+                <li><a href="#gallery" onclick="scrollToSection('gallery')">Galeri</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')">Kontak</a></li>
+            </ul>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Hero Background Upload -->
+        <div class="hero-bg-upload" onclick="triggerHeroBgUpload()" title="Klik untuk ganti background hero">
+            <span>🖼️ Ganti Background</span>
+        </div>
+        <input type="file" id="heroBgInput" accept="image/*" style="display:none" onchange="handleHeroBgUpload(event)">
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>SMKN 1 Gondang Nganjuk</h1>
+                <p>Sekolah Menengah Kejuruan Unggulan di Kabupaten Nganjuk. Mencetak Generasi Terampil, Kreatif, dan Siap Kerja!</p>
+                <div class="hero-buttons">
+                    <a href="#programs" class="btn btn-primary">Lihat Jurusan</a>
+                    <a href="#contact" class="btn btn-outline">Hubungi Kami</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- Hero Image Upload -->
+                <div class="hero-img-wrapper" onclick="triggerHeroImgUpload()" title="Klik untuk ganti foto hero">
+                    <img id="heroImg" src="data:image/svg+xml,<svg width='400' height='400' xmlns='http://www.w3.org/2000/svg'><rect width='400' height='400' fill='%23ffffff' opacity='0.1' rx='20'/><text x='200' y='180' font-size='80' text-anchor='middle' fill='white'>🎓</text><text x='200' y='260' font-size='18' text-anchor='middle' fill='rgba(255,255,255,0.7)'>Klik untuk upload foto</text></svg>" alt="Education">
+                    <div class="img-upload-overlay">📷 Ganti Foto</div>
+                </div>
+                <input type="file" id="heroImgInput" accept="image/*" style="display:none" onchange="handleHeroImgUpload(event)">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Tentang SMKN 1 Gondang</h2>
+                <p>Mengenal Lebih Dekat Sekolah Kami</p>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <!-- About Image Upload -->
+                    <div class="uploadable-img-wrapper" onclick="triggerAboutImgUpload()" title="Klik untuk ganti foto gedung sekolah">
+                        <img id="aboutImg" src="data:image/svg+xml,<svg width='500' height='400' xmlns='http://www.w3.org/2000/svg'><rect width='500' height='400' fill='%23e2e8f0'/><text x='250' y='180' font-size='80' text-anchor='middle' fill='%230f766e'>🏫</text><text x='250' y='260' font-size='18' text-anchor='middle' fill='%2364748b'>Klik untuk upload foto gedung</text></svg>" alt="School Building">
+                        <div class="img-upload-overlay">📷 Ganti Foto Gedung</div>
+                    </div>
+                    <input type="file" id="aboutImgInput" accept="image/*" style="display:none" onchange="handleAboutImgUpload(event)">
+                </div>
+                <div class="about-text">
+                    <h3>Visi & Misi</h3>
+                    <p><strong>Visi:</strong> Menjadi SMK unggulan yang menghasilkan lulusan berkompeten, berkarakter, dan berdaya saing global.</p>
+                    <p><strong>Misi:</strong></p>
+                    <ul style="color: #64748b; margin-left: 20px; margin-bottom: 2rem;">
+                        <li>Menyelenggarakan pendidikan kejuruan berkualitas</li>
+                        <li>Mengembangkan keterampilan siswa sesuai kebutuhan industri</li>
+                        <li>Membentuk karakter siswa yang berakhlak mulia</li>
+                        <li>Membangun kemitraan dengan dunia usaha dan industri</li>
+                    </ul>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Siswa Aktif</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Guru & Staff</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Jurusan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" style="background: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Program Keahlian</h2>
+                <p>Pilih Jurusan Sesuai Minat dan Bakatmu</p>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon program-icon-uploadable" onclick="triggerProgramIconUpload('tkj')" title="Klik untuk ganti ikon">
+                        <img id="programIcon_tkj" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                        <span id="programEmoji_tkj">💻</span>
+                    </div>
+                    <input type="file" id="programIconInput_tkj" accept="image/*" style="display:none" onchange="handleProgramIconUpload(event,'tkj')">
+                    <h3>Teknik Komputer & Jaringan</h3>
+                    <p>Mempelajari instalasi, konfigurasi, dan pemeliharaan sistem komputer dan jaringan.</p>
+                    <ul class="program-features">
+                        <li>Jaringan Komputer</li>
+                        <li>System Administration</li>
+                        <li>Cyber Security</li>
+                        <li>Cloud Computing</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="showProgramDetail('TKJ')" class="btn btn-primary" style="width: 100%; text-align: center;">Selengkapnya</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon program-icon-uploadable" onclick="triggerProgramIconUpload('tsm')" title="Klik untuk ganti ikon">
+                        <img id="programIcon_tsm" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                        <span id="programEmoji_tsm">🏍️</span>
+                    </div>
+                    <input type="file" id="programIconInput_tsm" accept="image/*" style="display:none" onchange="handleProgramIconUpload(event,'tsm')">
+                    <h3>Teknik Sepeda Motor</h3>
+                    <p>Menguasai perawatan, perbaikan, dan modifikasi sepeda motor modern.</p>
+                    <ul class="program-features">
+                        <li>Engine Motor</li>
+                        <li>Sistem Kelistrikan Motor</li>
+                        <li>Tune Up & Balancing</li>
+                        <li>Diagnosa Injeksi</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="showProgramDetail('TSM')" class="btn btn-primary" style="width: 100%; text-align: center;">Selengkapnya</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon program-icon-uploadable" onclick="triggerProgramIconUpload('tkr')" title="Klik untuk ganti ikon">
+                        <img id="programIcon_tkr" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                        <span id="programEmoji_tkr">🚗</span>
+                    </div>
+                    <input type="file" id="programIconInput_tkr" accept="image/*" style="display:none" onchange="handleProgramIconUpload(event,'tkr')">
+                    <h3>Teknik Kendaraan Ringan</h3>
+                    <p>Ahli dalam perawatan, perbaikan, dan modifikasi kendaraan bermotor roda empat.</p>
+                    <ul class="program-features">
+                        <li>Mesin Kendaraan</li>
+                        <li>Sistem Kelistrikan</li>
+                        <li>Chasis & Pemindah Tenaga</li>
+                        <li>AC & Tune Up</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="showProgramDetail('TKR')" class="btn btn-primary" style="width: 100%; text-align: center;">Selengkapnya</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon program-icon-uploadable" onclick="triggerProgramIconUpload('aphp')" title="Klik untuk ganti ikon">
+                        <img id="programIcon_aphp" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                        <span id="programEmoji_aphp">🍞</span>
+                    </div>
+                    <input type="file" id="programIconInput_aphp" accept="image/*" style="display:none" onchange="handleProgramIconUpload(event,'aphp')">
+                    <h3>Agribisnis Pengolahan Pangan Hasil Pertanian</h3>
+                    <p>Mengolah hasil pertanian menjadi produk pangan bernilai ekonomis tinggi.</p>
+                    <ul class="program-features">
+                        <li>Teknologi Pengolahan Pangan</li>
+                        <li>Quality Control</li>
+                        <li>Packaging & Marketing</li>
+                        <li>Food Safety</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="showProgramDetail('APHP')" class="btn btn-primary" style="width: 100%; text-align: center;">Selengkapnya</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon program-icon-uploadable" onclick="triggerProgramIconUpload('atu')" title="Klik untuk ganti ikon">
+                        <img id="programIcon_atu" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                        <span id="programEmoji_atu">🐔</span>
+                    </div>
+                    <input type="file" id="programIconInput_atu" accept="image/*" style="display:none" onchange="handleProgramIconUpload(event,'atu')">
+                    <h3>Agribisnis Ternak Unggas</h3>
+                    <p>Mengelola peternakan unggas modern dengan teknologi terkini.</p>
+                    <ul class="program-features">
+                        <li>Budidaya Unggas</li>
+                        <li>Kesehatan Ternak</li>
+                        <li>Pakan & Nutrisi</li>
+                        <li>Manajemen Kandang</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="showProgramDetail('ATU')" class="btn btn-primary" style="width: 100%; text-align: center;">Selengkapnya</a>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-icon program-icon-uploadable" onclick="triggerProgramIconUpload('atph')" title="Klik untuk ganti ikon">
+                        <img id="programIcon_atph" src="" alt="" style="display:none; width:100%; height:100%; object-fit:cover; border-radius:20px;">
+                        <span id="programEmoji_atph">🌾</span>
+                    </div>
+                    <input type="file" id="programIconInput_atph" accept="image/*" style="display:none" onchange="handleProgramIconUpload(event,'atph')">
+                    <h3>Agribisnis Tanaman Pangan & Hortikultura</h3>
+                    <p>Budidaya tanaman pangan dan hortikultura dengan teknik modern dan berkelanjutan.</p>
+                    <ul class="program-features">
+                        <li>Budidaya Tanaman</li>
+                        <li>Hidroponik & Organik</li>
+                        <li>Pest Management</li>
+                        <li>Agribisnis Modern</li>
+                    </ul>
+                    <a href="javascript:void(0)" onclick="showProgramDetail('ATPH')" class="btn btn-primary" style="width: 100%; text-align: center;">Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="facilities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Fasilitas Sekolah</h2>
+                <p>Sarana dan Prasarana Lengkap untuk Mendukung Pembelajaran</p>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card uploadable-facility" onclick="triggerFacilityUpload('lab')" title="Klik untuk ganti foto">
+                    <input type="file" id="facilityInput_lab" accept="image/*" style="display:none" onchange="handleFacilityUpload(event,'lab')">
+                    <div class="facility-bg" id="facilityBg_lab"></div>
+                    <div class="facility-icon" id="facilityIcon_lab">🖥️</div>
+                    <h3>Lab Komputer</h3>
+                    <p>5 Lab dengan 150+ unit komputer modern</p>
+                    <div class="facility-upload-hint">📷 Klik untuk upload foto</div>
+                </div>
+                <div class="facility-card uploadable-facility" onclick="triggerFacilityUpload('workshop')" title="Klik untuk ganti foto">
+                    <input type="file" id="facilityInput_workshop" accept="image/*" style="display:none" onchange="handleFacilityUpload(event,'workshop')">
+                    <div class="facility-bg" id="facilityBg_workshop"></div>
+                    <div class="facility-icon" id="facilityIcon_workshop">🔧</div>
+                    <h3>Workshop</h3>
+                    <p>Workshop lengkap untuk praktek otomotif</p>
+                    <div class="facility-upload-hint">📷 Klik untuk upload foto</div>
+                </div>
+                <div class="facility-card uploadable-facility" onclick="triggerFacilityUpload('perpus')" title="Klik untuk ganti foto">
+                    <input type="file" id="facilityInput_perpus" accept="image/*" style="display:none" onchange="handleFacilityUpload(event,'perpus')">
+                    <div class="facility-bg" id="facilityBg_perpus"></div>
+                    <div class="facility-icon" id="facilityIcon_perpus">📚</div>
+                    <h3>Perpustakaan</h3>
+                    <p>10.000+ koleksi buku dan digital library</p>
+                    <div class="facility-upload-hint">📷 Klik untuk upload foto</div>
+                </div>
+                <div class="facility-card uploadable-facility" onclick="triggerFacilityUpload('olahraga')" title="Klik untuk ganti foto">
+                    <input type="file" id="facilityInput_olahraga" accept="image/*" style="display:none" onchange="handleFacilityUpload(event,'olahraga')">
+                    <div class="facility-bg" id="facilityBg_olahraga"></div>
+                    <div class="facility-icon" id="facilityIcon_olahraga">🏃</div>
+                    <h3>Lapangan Olahraga</h3>
+                    <p>Lapangan basket, voli, dan futsal</p>
+                    <div class="facility-upload-hint">📷 Klik untuk upload foto</div>
+                </div>
+                <div class="facility-card uploadable-facility" onclick="triggerFacilityUpload('kantin')" title="Klik untuk ganti foto">
+                    <input type="file" id="facilityInput_kantin" accept="image/*" style="display:none" onchange="handleFacilityUpload(event,'kantin')">
+                    <div class="facility-bg" id="facilityBg_kantin"></div>
+                    <div class="facility-icon" id="facilityIcon_kantin">🍽️</div>
+                    <h3>Kantin</h3>
+                    <p>Kantin sehat dan nyaman</p>
+                    <div class="facility-upload-hint">📷 Klik untuk upload foto</div>
+                </div>
+                <div class="facility-card uploadable-facility" onclick="triggerFacilityUpload('musholla')" title="Klik untuk ganti foto">
+                    <input type="file" id="facilityInput_musholla" accept="image/*" style="display:none" onchange="handleFacilityUpload(event,'musholla')">
+                    <div class="facility-bg" id="facilityBg_musholla"></div>
+                    <div class="facility-icon" id="facilityIcon_musholla">🕌</div>
+                    <h3>Musholla</h3>
+                    <p>Tempat ibadah yang representatif</p>
+                    <div class="facility-upload-hint">📷 Klik untuk upload foto</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" style="background: var(--light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Galeri Kegiatan</h2>
+                <p>Dokumentasi Kegiatan dan Prestasi Siswa</p>
+            </div>
+
+            <!-- Gallery Upload Button -->
+            <div style="text-align:center; margin-bottom:2rem;">
+                <label for="galleryBatchInput" class="btn btn-primary" style="cursor:pointer; display:inline-flex; align-items:center; gap:8px;">
+                    📷 Upload Foto Galeri (Bisa Pilih Banyak)
+                </label>
+                <input type="file" id="galleryBatchInput" accept="image/*" multiple style="display:none" onchange="handleGalleryBatchUpload(event)">
+                <p style="margin-top:0.5rem; color:#64748b; font-size:0.875rem;">Pilih beberapa foto sekaligus untuk ditampilkan di galeri</p>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items generated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Testimoni Alumni</h2>
+                <p>Cerita Sukses Lulusan SMKN 1 Gondang</p>
+            </div>
+            <div class="testimonial-grid" id="testimonialGrid">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Hubungi Kami</h2>
+                <p>Untuk informasi lebih lanjut, silakan hubungi kami</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Alamat</h4>
+                            <p>Jl. Raya Gondang Lengkong<br>Balonggebang, Gondang, Nganjuk<br>Jawa Timur 64461</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Telepon</h4>
+                            <p>(0358) 611606<br>0851-5511-2401</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>smkn1gondang@yahoo.co.id<br>ppdb@smkn1gondang.sch.id</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-details">
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Kamis: 07.00 - 15.30 WIB<br>Jumat: 07.00 - 16.00 WIB</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3 style="margin-bottom: 1.5rem;">Kirim Pesan</h3>
+                    <form onsubmit="handleSubmit(event)">
+                        <!-- Avatar Upload in form -->
+                        <div class="form-group" style="text-align:center;">
+                            <label>Foto Profil (Opsional)</label>
+                            <div class="avatar-upload-wrapper" onclick="triggerAvatarUpload()" title="Klik untuk upload foto profil">
+                                <div id="avatarPreview" class="avatar-preview">👤</div>
+                                <div class="avatar-upload-hint">📷 Upload Foto</div>
+                            </div>
+                            <input type="file" id="avatarInput" accept="image/*" style="display:none" onchange="handleAvatarUpload(event)">
+                        </div>
+                        <div class="form-group">
+                            <label>Nama Lengkap</label>
+                            <input type="text" id="name" placeholder="Masukkan nama lengkap" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" id="email" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Nomor Telepon</label>
+                            <input type="tel" id="phone" placeholder="08xx-xxxx-xxxx" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Pesan</label>
+                            <textarea id="message" placeholder="Tulis pesan Anda..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SMKN 1 Gondang Nganjuk</h3>
+                    <p>Sekolah Menengah Kejuruan unggulan yang menghasilkan lulusan berkompeten dan siap kerja.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘</a>
+                        <a href="#" class="social-link">📸</a>
+                        <a href="#" class="social-link">🐦</a>
+                        <a href="#" class="social-link">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Link Cepat</h3>
+                    <a href="#about">Tentang Kami</a>
+                    <a href="#programs">Program Keahlian</a>
+                    <a href="#facilities">Fasilitas</a>
+                    <a href="#gallery">Galeri</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Program Keahlian</h3>
+                    <a href="javascript:void(0)">Teknik Komputer & Jaringan</a>
+                    <a href="javascript:void(0)">Teknik Sepeda Motor</a>
+                    <a href="javascript:void(0)">Teknik Kendaraan Ringan</a>
+                    <a href="javascript:void(0)">Agribisnis Pengolahan Pangan</a>
+                    <a href="javascript:void(0)">Agribisnis Ternak Unggas</a>
+                    <a href="javascript:void(0)">Agribisnis Tanaman Pangan</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Informasi</h3>
+                    <a href="#">PPDB</a>
+                    <a href="#">Berita & Artikel</a>
+                    <a href="#">Prestasi</a>
+                    <a href="#">Kerjasama Industri</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SMKN 1 Gondang Nganjuk. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+            <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); lightboxNav(-1)">‹</button>
+            <img id="lightboxImg" src="" alt="">
+            <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); lightboxNav(1)">›</button>
+            <div class="lightbox-caption" id="lightboxCaption"></div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()">⬆️</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
